@@ -8,7 +8,7 @@ Read the contents of task03.txt into your program and determine the points value
 For sample data task03.txt, the largest sum should be 68787
 """
 
-filename = 'task02a.txt'
+filename = 'task03.txt'
 file = open(filename,'r')
 data = file.read()
 myList = data.split('\n',)
