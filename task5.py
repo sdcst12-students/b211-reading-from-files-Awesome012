@@ -13,12 +13,29 @@ Apple Inc.
 Enter stock symbol: YANG
 No matches
 """
+test = input("input the name of a stock: ")
+test = test
+numberT = 0
+import csv
+reader = csv.reader(open('task5.csv'))
 
+result = {}
+for row in reader:
+    key = row[0]
+    if key in result:
+        # implement your duplicate row handling here
+        pass
+    result[key] = row[1:]
 
-filename = 'task5.csv'
-file = open(filename,'r')
-data = file.read()
-print(data)
-mydict = dict((rows[0],rows[1]) for rows in data)
-print(mydict)
+for x in result:
+    if test in x:
+        numberT = numberT + 1
 
+if numberT == 1:
+    for x in result:
+        if test in x:
+            print(f"{result[x]}")
+elif numberT > 1:
+    print(f"There are {numberT} stocks with that symbol")
+else:
+    print("Invalid search. try again")
