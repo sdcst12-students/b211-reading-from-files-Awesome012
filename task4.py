@@ -15,14 +15,18 @@ Create a function that reads the specific value for a specific level and an armo
 filename = 'task04.txt'
 file = open(filename,'r')
 data = file.read()
-myList = data.split('\n',)
-finallist = myList.split(" ")
-print(myList)
 
 
 def target(lvl,ac):
-
-    return
+    global data
+    myList = data.split('\n',)
+    otherList = myList[lvl]
+    myList = otherList.split(' ')
+    ac = int(ac)
+    check = 10 - ac
+    final = myList[check]
+    final = int(final)
+    return final
 
 #im not sure if the first one is wrong or not, 
 #i changed the first target from 23 to 12 because its the only way it all 3 would work

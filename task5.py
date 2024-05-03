@@ -13,3 +13,12 @@ Apple Inc.
 Enter stock symbol: YANG
 No matches
 """
+
+
+filename = 'task5.csv'
+file = open(filename,'r')
+data = file.read()
+print(data)
+mydict = dict((rows[0],rows[1]) for rows in data)
+print(mydict)
+
